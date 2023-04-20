@@ -10,16 +10,40 @@ public class BinarySearchTest {
     }
 
     @Test
-    @DisplayName(value = "找到")
+    @DisplayName(value = "basic找到")
     public void binarySearchBasicFound() {
         int[] array = {4, 8, 20, 33, 46, 57, 76, 91};
         Assert.assertEquals(1, BinarySearch.binarySearchBasic(array, 8));
+        Assert.assertEquals(4, BinarySearch.binarySearchBasic(array, 46));
+        Assert.assertEquals(7, BinarySearch.binarySearchBasic(array, 91));
     }
 
     @Test
-    @DisplayName(value = "没找到")
+    @DisplayName(value = "basic没找到")
     public void binarySearchBasicNoFound() {
         int[] array = {4, 8, 20, 33, 46, 57, 76, 91};
         Assert.assertEquals(-1, BinarySearch.binarySearchBasic(array, 9));
+        Assert.assertEquals(-1, BinarySearch.binarySearchBasic(array, 1));
+        Assert.assertEquals(-1, BinarySearch.binarySearchBasic(array, 99));
+    }
+
+
+
+    @Test
+    @DisplayName(value = "alternative找到")
+    public void binarySearchAlternativeFound() {
+        int[] array = {4, 8, 20, 33, 46, 57, 76, 91};
+        Assert.assertEquals(1, BinarySearch.binarySearchAlternative(array, 8));
+        Assert.assertEquals(4, BinarySearch.binarySearchAlternative(array, 46));
+        Assert.assertEquals(7, BinarySearch.binarySearchAlternative(array, 91));
+    }
+
+    @Test
+    @DisplayName(value = "alternative没找到")
+    public void binarySearchAlternativeNoFound() {
+        int[] array = {4, 8, 20, 33, 46, 57, 76, 91};
+        Assert.assertEquals(-1, BinarySearch.binarySearchAlternative(array, 9));
+        Assert.assertEquals(-1, BinarySearch.binarySearchAlternative(array, 1));
+        Assert.assertEquals(-1, BinarySearch.binarySearchAlternative(array, 99));
     }
 }
