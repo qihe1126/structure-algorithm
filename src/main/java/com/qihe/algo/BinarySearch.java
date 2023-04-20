@@ -15,7 +15,7 @@ public class BinarySearch {
             if (target < array[m]) {
                 j = m - 1;
             } else if (array[m] < target) {
-                j = m + 1;
+                i = m + 1;
             } else {
                 return m;
             }
