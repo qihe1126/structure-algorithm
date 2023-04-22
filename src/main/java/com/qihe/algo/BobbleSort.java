@@ -7,11 +7,11 @@ public class BobbleSort {
      *
      * @param array 数组
      */
-    public static void bobbleSort(int[] array) {
-        bobbleSort(array, array.length - 1);
+    public static void sort(int[] array) {
+        sort(array, array.length - 1);
     }
 
-    private static void bobbleSort(int[] array, int rightBoundary) {
+    private static void sort(int[] array, int rightBoundary) {
         if (rightBoundary == 0) {
             return;
         }
@@ -24,7 +24,7 @@ public class BobbleSort {
                 x = i;
             }
         }
-        bobbleSort(array, x);
+        sort(array, x);
     }
 
 

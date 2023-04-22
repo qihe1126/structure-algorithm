@@ -14,7 +14,7 @@ public class BobbleSortTest {
     public void bobbleSort() {
         int[] array = {5, 1, 9, 6, 88, 33, 44, 22, 11, 91};
         int[] array2 = {1, 5, 6, 9, 11, 22, 33, 44, 88, 91};
-        BobbleSort.bobbleSort(array);
+        BobbleSort.sort(array);
         Assert.assertArrayEquals(array2, array);
     }
 
